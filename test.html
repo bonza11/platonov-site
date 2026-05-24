@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тестирование</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.result{
+    font-size:30px;
+    margin-top:30px;
+    font-weight:bold;
+}
+
+button{
+    padding:15px 30px;
+    font-size:22px;
+    border:none;
+    background:#101720;
+    color:white;
+    cursor:pointer;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#2b3a4d;
+}
+
+label{
+    display:block;
+    margin-bottom:15px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+input{
+    margin-right:10px;
+}
+
+.correct{
+    color:green;
+}
+
+.wrong{
+    color:red;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Сокровенный человек: творчество А. П. Платонова</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Главная</a></li>
+<li><a href="bio.html">Биография</a></li>
+<li><a href="works.html">Произведения</a></li>
+<li><a href="stylepage.html">Анализ стиля</a></li>
+<li><a href="test.html">Тестирование</a></li>
+</ul>
+</nav>
+
+<main>
+
+<h2>Тест по творчеству Платонова</h2>
+
+<form id="quizForm">
+
+<div class="card">
+
+<h3>1. Настоящая фамилия Платонова?</h3>
+
+<label>
+<input type="radio" name="q1" value="0">
+Иванов
+</label>
+
+<label>
+<input type="radio" name="q1" value="1">
+Климентов
+</label>
+
+<label>
+<input type="radio" name="q1" value="0">
+Петров
+</label>
+
+</div>
+
+<div class="card">
+
+<h3>2. Какое произведение написал Платонов?</h3>
+
+<label>
+<input type="radio" name="q2" value="1">
+«Котлован»
+</label>
+
+<label>
+<input type="radio" name="q2" value="0">
+«Тихий Дон»
+</label>
+
+<label>
+<input type="radio" name="q2" value="0">
+«Мёртвые души»
+</label>
+
+</div>
+
+<div class="card">
+
+<h3>3. В каком году родился Платонов?</h3>
+
+<label>
+<input type="radio" name="q3" value="1">
+1899
+</label>
+
+<label>
+<input type="radio" name="q3" value="0">
+1912
+</label>
+
+<label>
+<input type="radio" name="q3" value="0">
+1880
+</label>
+
+</div>
+
+<div class="card">
+
+<h3>4. Главная тема творчества Платонова?</h3>
+
+<label>
+<input type="radio" name="q4" value="1">
+Судьба человека
+</label>
+
+<label>
+<input type="radio" name="q4" value="0">
+Космос
+</label>
+
+<label>
+<input type="radio" name="q4" value="0">
+Морские путешествия
+</label>
+
+</div>
+
+<button type="button" onclick="checkAnswers()">
+Проверить результат
+</button>
+
+<div id="result" class="result"></div>
+
+</form>
+
+</main>
+
+<footer>
+
+<h3>Контактная информация</h3>
+
+<p>Email: platonov-site@mail.ru</p>
+
+<p>Телефон: +7 (777) 777-77-77</p>
+
+<p>Адрес: г. Череповец, ул. Советский пр-т, 10</p>
+
+</footer>
+
+<script>
+
+function checkAnswers(){
+
+    let score = 0;
+
+    let answers = document.querySelectorAll('input[type="radio"]:checked');
+
+    answers.forEach(answer => {
+        score += Number(answer.value);
+    });
+
+    let result = document.getElementById("result");
+
+    if(score === 4){
+        result.innerHTML = "Отлично! Все ответы правильные. (4/4)";
+        result.className = "result correct";
+    }
+
+    else if(score >= 2){
+        result.innerHTML = "Хороший результат! Правильных ответов: " + score + "/4";
+        result.className = "result correct";
+    }
+
+    else{
+        result.innerHTML = "Есть ошибки. Правильных ответов: " + score + "/4";
+        result.className = "result wrong";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
