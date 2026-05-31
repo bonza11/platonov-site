@@ -1,218 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Тестирование</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование</title>
 
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-.result{
-    font-size:30px;
-    margin-top:30px;
-    font-weight:bold;
-}
-
-button{
-    padding:15px 30px;
-    font-size:22px;
-    border:none;
-    background:#101720;
-    color:white;
-    cursor:pointer;
-    border-radius:8px;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#2b3a4d;
-}
-
-label{
-    display:block;
-    margin-bottom:15px;
-    font-size:22px;
-    cursor:pointer;
-}
-
-input{
-    margin-right:10px;
-}
-
-.correct{
-    color:green;
-}
-
-.wrong{
-    color:red;
-}
-
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>Сокровенный человек: творчество А. П. Платонова</h1>
-</header>
+    <header>
+        <h1>Творчество Платонова Андрея Платоновича</h1>
+    </header>
 
-<nav>
-<ul>
-<li><a href="index.html">Главная</a></li>
-<li><a href="bio.html">Биография</a></li>
-<li><a href="works.html">Произведения</a></li>
-<li><a href="stylepage.html">Анализ стиля</a></li>
-<li><a href="test.html">Тестирование</a></li>
-</ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="bio.html">Биография</a></li>
+            <li><a href="works.html">Произведения</a></li>
+            <li><a href="stylepage.html">Анализ стиля</a></li>
+            <li><a href="test.html" class="active">Тестирование</a></li>
+        </ul>
+    </nav>
 
-<main>
+    <main>
 
-<h2>Тест по творчеству Платонова</h2>
+        <h2>Тест по творчеству Андрея Платонова</h2>
 
-<form id="quizForm">
+        <form id="test">
 
-<div class="card">
+            <div class="card">
+                <h3>1. Какова настоящая фамилия писателя (при рождении)?</h3>
 
-<h3>1. Настоящая фамилия Платонова?</h3>
+                <label><input type="radio" name="q1" value="0"> А) Платонов</label>
+                <label><input type="radio" name="q1" value="1"> Б) Климентов</label>
+                <label><input type="radio" name="q1" value="0"> В) Воронцов</label>
+                <label><input type="radio" name="q1" value="0"> Г) Никитин</label>
+            </div>
 
-<label>
-<input type="radio" name="q1" value="0">
-Иванов
-</label>
+            <div class="card">
+                <h3>2. В каком произведении Вощев ищет «вещество существования»?</h3>
 
-<label>
-<input type="radio" name="q1" value="1">
-Климентов
-</label>
+                <label><input type="radio" name="q2" value="0"> А) Чевенгур</label>
+                <label><input type="radio" name="q2" value="1"> Б) Котлован</label>
+                <label><input type="radio" name="q2" value="0"> В) Ювенильное море</label>
+                <label><input type="radio" name="q2" value="0"> Г) Сокровенный человек</label>
+            </div>
 
-<label>
-<input type="radio" name="q1" value="0">
-Петров
-</label>
+            <div class="card">
+                <h3>3. Какую профессию получил Платонов в молодости?</h3>
 
-</div>
+                <label><input type="radio" name="q3" value="0"> А) Врач</label>
+                <label><input type="radio" name="q3" value="0"> Б) Журналист</label>
+                <label><input type="radio" name="q3" value="1"> В) Инженер-механик (помощник машиниста)</label>
+                <label><input type="radio" name="q3" value="0"> Г) Учитель географии</label>
+            </div>
 
-<div class="card">
+            <div class="card">
+                <h3>4. Какой рассказ вызвал скандал после публикации?</h3>
 
-<h3>2. Какое произведение написал Платонов?</h3>
+                <label><input type="radio" name="q4" value="0"> А) В прекрасном и яростном мире</label>
+                <label><input type="radio" name="q4" value="0"> Б) Одухотворённые люди</label>
+                <label><input type="radio" name="q4" value="1"> В) Возвращение</label>
+                <label><input type="radio" name="q4" value="0"> Г) Никодим Максимович</label>
+            </div>
 
-<label>
-<input type="radio" name="q2" value="1">
-«Котлован»
-</label>
+            <div class="card">
+                <h3>5. В сказке-были «Неизвестный цветок» цветок рос...</h3>
 
-<label>
-<input type="radio" name="q2" value="0">
-«Тихий Дон»
-</label>
+                <label><input type="radio" name="q5" value="0"> А) На болоте</label>
+                <label><input type="radio" name="q5" value="0"> Б) На пустыре между камнями</label>
+                <label><input type="radio" name="q5" value="1"> В) На глине</label>
+                <label><input type="radio" name="q5" value="0"> Г) В расщелине скалы</label>
+            </div>
 
-<label>
-<input type="radio" name="q2" value="0">
-«Мёртвые души»
-</label>
+            <div class="card">
+                <h3>6. Кто раскритиковал повесть «Впрок»?</h3>
 
-</div>
+                <label><input type="radio" name="q6" value="0"> А) Ленин</label>
+                <label><input type="radio" name="q6" value="1"> Б) Сталин</label>
+                <label><input type="radio" name="q6" value="0"> В) Троцкий</label>
+                <label><input type="radio" name="q6" value="0"> Г) Бухарин</label>
+            </div>
 
-<div class="card">
+            <div class="card">
+                <h3>7. Главный герой повести «Сокровенный человек»?</h3>
 
-<h3>3. В каком году родился Платонов?</h3>
+                <label><input type="radio" name="q7" value="0"> А) Захар Павлович</label>
+                <label><input type="radio" name="q7" value="1"> Б) Фома Пухов</label>
+                <label><input type="radio" name="q7" value="0"> В) Макар Ганушкин</label>
+<label><input type="radio" name="q7" value="0"> Г) Михаил Кирпичников</label>
+            </div>
 
-<label>
-<input type="radio" name="q3" value="1">
-1899
-</label>
+            <div class="card">
+                <h3>8. Какая повесть о «городе социализма» была опубликована только в конце 1980-х?</h3>
 
-<label>
-<input type="radio" name="q3" value="0">
-1912
-</label>
+                <label><input type="radio" name="q8" value="1"> А) Счастливая Москва</label>
+                <label><input type="radio" name="q8" value="0"> Б) Джан</label>
+                <label><input type="radio" name="q8" value="0"> В) Котлован</label>
+                <label><input type="radio" name="q8" value="0"> Г) Чевенгур</label>
+            </div>
 
-<label>
-<input type="radio" name="q3" value="0">
-1880
-</label>
+            <div class="card">
+                <h3>9. В каком журнале был опубликован рассказ «Усомнившийся Макар»?</h3>
 
-</div>
+                <label><input type="radio" name="q9" value="0"> А) Новый мир</label>
+                <label><input type="radio" name="q9" value="1"> Б) Красная новь</label>
+                <label><input type="radio" name="q9" value="0"> В) Знамя</label>
+                <label><input type="radio" name="q9" value="0"> Г) Октябрь</label>
+            </div>
 
-<div class="card">
+            <div class="card">
+                <h3>10. От чего умер Андрей Платонов?</h3>
 
-<h3>4. Главная тема творчества Платонова?</h3>
+                <label><input type="radio" name="q10" value="0"> А) От ранения на фронте</label>
+                <label><input type="radio" name="q10" value="1"> Б) От туберкулёза</label>
+                <label><input type="radio" name="q10" value="0"> В) Был репрессирован</label>
+                <label><input type="radio" name="q10" value="0"> Г) От голода</label>
+            </div>
 
-<label>
-<input type="radio" name="q4" value="1">
-Судьба человека
-</label>
+            <button type="button" onclick="checkTest()">
+                Проверить результат
+            </button>
 
-<label>
-<input type="radio" name="q4" value="0">
-Космос
-</label>
+            <p id="result"></p>
 
-<label>
-<input type="radio" name="q4" value="0">
-Морские путешествия
-</label>
+        </form>
 
-</div>
+    </main>
 
-<button type="button" onclick="checkAnswers()">
-Проверить результат
-</button>
+    <footer>
 
-<div id="result" class="result"></div>
+        <div class="footer-left">
+            <p>Email: platonov-site@mail.ru</p>
+            <p>Телефон: +7 (777) 777-77-77</p>
+            <p>Адрес: г. Череповец, ул. Советский пр-т, 10</p>
+        </div>
 
-</form>
+        <div class="footer-right">
+            <p>© 2026 | Сайт о творчестве Андрея Платонова</p>
+            <p>Для образовательных и культурных целей</p>
+        </div>
 
-</main>
+    </footer>
 
-<footer>
+    <script>
 
-<h3>Контактная информация</h3>
+        function checkTest() {
 
-<p>Email: platonov-site@mail.ru</p>
+            let score = 0;
 
-<p>Телефон: +7 (777) 777-77-77</p>
+            let answers = document.querySelectorAll("input:checked");
 
-<p>Адрес: г. Череповец, ул. Советский пр-т, 10</p>
+            answers.forEach(answer => {
+                score += Number(answer.value);
+            });
 
-</footer>
+            document.getElementById("result").innerHTML =
+                "Ваш результат: " + score + " из 10";
 
-<script>
+        }
 
-function checkAnswers(){
-
-    let score = 0;
-
-    let answers = document.querySelectorAll('input[type="radio"]:checked');
-
-    answers.forEach(answer => {
-        score += Number(answer.value);
-    });
-
-    let result = document.getElementById("result");
-
-    if(score === 4){
-        result.innerHTML = "Отлично! Все ответы правильные. (4/4)";
-        result.className = "result correct";
-    }
-
-    else if(score >= 2){
-        result.innerHTML = "Хороший результат! Правильных ответов: " + score + "/4";
-        result.className = "result correct";
-    }
-
-    else{
-        result.innerHTML = "Есть ошибки. Правильных ответов: " + score + "/4";
-        result.className = "result wrong";
-    }
-
-}
-
-</script>
+    </script>
 
 </body>
+
 </html>

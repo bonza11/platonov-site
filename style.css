@@ -1,5 +1,5 @@
 /* =========================
-ОБЩИЕ СТИЛИ САЙТА
+ОБЩИЕ СТИЛИ
 ========================= */
 
 *{
@@ -15,31 +15,42 @@ body{
 }
 
 /* =========================
-HEADER
+ГЛАВНАЯ СТРАНИЦА БЕЗ СКРОЛЛА
 ========================= */
 
-header{
-    padding:20px 40px 10px;
-}
-
-header h1{
-    font-size:48px;
-    text-transform:uppercase;
-    font-weight:bold;
+.home-page{
+    height:100vh;
+    overflow:hidden;
 }
 
 /* =========================
-НАВИГАЦИЯ
+ШАПКА
+========================= */
+
+header{
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+    text-transform:uppercase;
+}
+
+/* =========================
+МЕНЮ
 ========================= */
 
 nav{
     background:#101720;
-    padding:15px 40px;
+    padding:15px;
 }
 
 nav ul{
     display:flex;
-    gap:50px;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
     list-style:none;
     flex-wrap:wrap;
 }
@@ -47,13 +58,19 @@ nav ul{
 nav a{
     color:white;
     text-decoration:none;
-    font-size:24px;
-    text-transform:uppercase;
+    font-size:22px;
     transition:0.3s;
 }
 
 nav a:hover{
     color:#d8c7a0;
+}
+
+/* активная страница */
+
+.active{
+    color:#d8c7a0 !important;
+    font-weight:bold;
 }
 
 /* =========================
@@ -62,24 +79,17 @@ nav a:hover{
 
 main{
     width:90%;
-    margin:50px auto;
-    min-height:600px;
+    margin:40px auto;
 }
 
-h2{
-    font-size:42px;
+main h2{
+    font-size:40px;
     margin-bottom:30px;
 }
 
-h3{
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-p{
+main p{
     font-size:22px;
     line-height:1.8;
-    margin-bottom:20px;
 }
 
 /* =========================
@@ -88,17 +98,18 @@ p{
 
 .hero{
     width:90%;
-    margin:40px auto;
+    margin:30px auto;
     display:flex;
-    min-height:600px;
+    min-height:65vh;
     border-radius:10px;
     overflow:hidden;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
 }
 
 .hero-image{
     flex:1;
-    background:url('platonov.jpg') center/cover no-repeat;
+    background:url("platonov.jpg")
+    center/cover no-repeat;
 }
 
 .hero-text{
@@ -108,32 +119,32 @@ p{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:60px;
+    padding:50px;
 }
 
 .hero-text h2{
-    font-size:80px;
-    line-height:1;
+    font-size:72px;
+    margin-bottom:20px;
 }
 
-.hero-text .years{
-    font-size:55px;
-    margin:20px 0;
+.years{
+    font-size:50px;
+    margin-bottom:20px;
 }
 
 .hero-text p{
-    font-size:36px;
+    font-size:30px;
 }
 
 .btn{
     display:inline-block;
     margin-top:30px;
-    padding:18px 35px;
+    padding:15px 30px;
     background:#f5f1e5;
     color:#111;
     text-decoration:none;
-    font-size:28px;
     border-radius:8px;
+    font-size:24px;
     transition:0.3s;
 }
 
@@ -149,8 +160,61 @@ p{
     background:white;
     padding:30px;
     margin-bottom:30px;
-    border-radius:10px;
-    box-shadow:0 0 5px rgba(0,0,0,0.1);
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.card h3{
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.card p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* эффект для произведений и анализа стиля */
+
+.card:hover{
+    transform:scale(1.03);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* =========================
+ТЕСТ
+========================= */
+
+label{
+    display:block;
+    margin:10px 0;
+    font-size:20px;
+    cursor:pointer;
+}
+
+input[type="radio"]{
+    margin-right:10px;
+}
+
+button{
+    padding:15px 30px;
+    background:#101720;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:20px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#243446;
+}
+
+#result{
+    margin-top:20px;
+    font-size:26px;
+    font-weight:bold;
 }
 
 /* =========================
@@ -160,17 +224,25 @@ p{
 footer{
     background:#101720;
     color:white;
-    padding:40px;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
     margin-top:50px;
 }
 
-footer h3{
-    margin-bottom:20px;
+.footer-left p{
+    margin:5px 0;
+    font-size:16px;
 }
 
-footer p{
-    font-size:20px;
-    margin-bottom:10px;
+.footer-right{
+    text-align:right;
+}
+
+.footer-right p{
+    margin:5px 0;
+    font-size:14px;
 }
 
 /* =========================
@@ -181,6 +253,10 @@ footer p{
 
     header h1{
         font-size:28px;
+    }
+
+    nav ul{
+        gap:15px;
     }
 
     nav a{
@@ -195,7 +271,7 @@ footer p{
         font-size:50px;
     }
 
-    .hero-text .years{
+    .years{
         font-size:35px;
     }
 
@@ -203,11 +279,60 @@ footer p{
         font-size:24px;
     }
 
-    .btn{
-        font-size:20px;
+    footer{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
     }
 
-    p{
-        font-size:18px;
+    .footer-right{
+        text-align:center;
     }
+}
+
+/* =========================
+ПОДВАЛ ГЛАВНОЙ СТРАНИЦЫ
+========================= */
+
+.home-footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+
+    background:#101720;
+    color:white;
+
+    padding:10px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:12px;
+}
+
+.home-footer p{
+    margin:2px 0;
+}
+
+.home-footer .footer-right{
+    text-align:right;
+}
+
+/* адаптация под телефон */
+
+@media(max-width:768px){
+
+    .home-footer{
+        flex-direction:column;
+        gap:5px;
+        text-align:center;
+        padding:8px;
+    }
+
+    .home-footer .footer-right{
+        text-align:center;
+    }
+
 }
